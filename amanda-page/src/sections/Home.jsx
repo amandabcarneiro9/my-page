@@ -12,7 +12,7 @@ export default function Home() {
         <h1>
           Hi, I'm <TypeAnimated text="Amanda" />
         </h1>
-        <span>Junior web developer</span>
+        <span className="__subtitle">Junior web developer</span>
         <p>
           {' '}
           As a junior web developer, I'm on the process to improve my skills,learning how to learn efficientily, and

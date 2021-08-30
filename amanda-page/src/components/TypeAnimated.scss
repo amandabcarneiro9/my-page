@@ -1,9 +1,13 @@
-.type-animated::after {
-  content: '⏐';
-  color: black;
-  animation: cursor 500ms ease-in-out infinite;
-}
+@import '../scss/colors.scss';
 
+.type-animated {
+  color: $secondary-color;
+  &::after {
+    content: '⏐';
+    color: black;
+    animation: cursor 500ms ease-in-out infinite;
+  }
+}
 @keyframes cursor {
   0% {
     opacity: 1;
