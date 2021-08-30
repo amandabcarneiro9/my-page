@@ -1,0 +1,41 @@
+@import '../scss/colors.scss';
+@import '../scss/media-queries.scss';
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .__first-illustration {
+    img {
+      width: 200px;
+      height: 30%;
+    }
+  }
+
+  .__presentation {
+    text-align: center;
+    h1 {
+      color: $secondary-color;
+      //   animation: fadeIn 500ms ease-out;
+    }
+
+    .__subtitle {
+      font-size: 18px;
+      color: $primary-color;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

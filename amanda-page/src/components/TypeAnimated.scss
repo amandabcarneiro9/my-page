@@ -1,0 +1,19 @@
+.type-animated::after {
+  content: '⏐';
+  color: black;
+  animation: cursor 500ms ease-in-out infinite;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
