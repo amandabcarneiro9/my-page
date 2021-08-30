@@ -1,4 +1,5 @@
 import TypeAnimated from '../components/TypeAnimated'
+import SocialIcons from '../components/SocialIcons'
 import FirstImage from '../images/women_generated.jpg'
 import '../scss/home.scss'
 
@@ -10,16 +11,19 @@ export default function Home() {
       </div>
       <div className="__presentation">
         <h1>
-          Hi, I'm <TypeAnimated text="Amanda" />
+          Hi, <br />
+          I'm <TypeAnimated text="Amanda" timeToComplete={600} />
         </h1>
         <span className="__subtitle">Junior web developer</span>
-        <p>
+        <p className="__description">
           {' '}
-          As a junior web developer, I'm on the process to improve my skills,learning how to learn efficientily, and
-          making my code as clean and understanble as possible.
+          As a junior web developer, I'm on the process to improve my skills,learning how to learn efficientily,{' '}
+          <TypeAnimated text="and making my code as clean and understanble as possible." timeToComplete={700} />
         </p>
+
+        <button className="__know-me-button">Know me better → </button>
+        <SocialIcons />
       </div>
-      <button className="__know-me-button">Know me better</button>
     </div>
   )
 }

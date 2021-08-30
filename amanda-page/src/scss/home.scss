@@ -2,28 +2,72 @@
 @import '../scss/media-queries.scss';
 
 .home {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  @include for-desktop-and-large {
+    flex-direction: row-reverse;
+  }
+
   .__first-illustration {
     img {
       width: 200px;
       height: 30%;
+
+      @include for-desktop-and-large {
+        width: 500px;
+        height: 50%;
+        transform: scaleX(-1);
+      }
     }
   }
 
   .__presentation {
     text-align: center;
-    // animation: fadeIn 500ms ease-out;
+    animation: fadeIn 500ms ease-out;
+
+    @include for-desktop-and-large {
+      text-align: left;
+      padding: 2px 112px;
+      justify-self: flex-end;
+    }
     h1 {
       color: black;
+      font-size: 3em;
     }
 
     .__subtitle {
-      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: $forth-color;
+    }
+
+    .__description {
+      font-family: 'Poppins', sans-serif;
       color: $primary-color;
+      font-size: 18px;
+      padding: 10px 10px;
+    }
+
+    .__know-me-button {
+      background-color: $secondary-color;
+      color: $third-color;
+      line-height: 18px;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 10px 10px 10px 10px;
+      padding: 15px 25px;
+      margin-bottom: 20px;
+
+      &:hover {
+        border-style: solid $secondary-color;
+        background-color: $third-color;
+        color: $secondary-color;
+      }
     }
   }
 }

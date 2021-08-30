@@ -31,6 +31,8 @@ header {
       position: fixed;
       top: 0;
       background: lightgray;
+      z-index: 1000;
+      left: 0;
 
       .__nav-links {
         display: flex;

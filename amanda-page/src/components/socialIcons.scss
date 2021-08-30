@@ -1,0 +1,12 @@
+@import '../scss/colors.scss';
+
+.__media-links {
+  a {
+    margin-left: 10px;
+    color: $primary-color;
+    font-size: 20px;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
