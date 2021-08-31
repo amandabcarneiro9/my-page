@@ -1,0 +1,14 @@
+@import '../scss/colors.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: [row1-start] 50% [row1-end] 50%;
+  column-gap: 20px;
+  row-gap: 20px;
+
+  .__icon {
+    color: $forth-color;
+    font-size: 50px;
+  }
+}

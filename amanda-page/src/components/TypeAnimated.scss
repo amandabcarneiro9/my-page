@@ -1,7 +1,7 @@
 @import '../scss/colors.scss';
 
 .type-animated {
-  color: $secondary-color;
+  color: $second-color;
   &::after {
     content: '│';
     color: black;

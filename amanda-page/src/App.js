@@ -4,6 +4,7 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import { BrowserRouter } from 'react-router-dom'
+import '../src/scss/app.scss'
 
 import Header from './components/Header'
 import MainPage from './components/MainPage'
