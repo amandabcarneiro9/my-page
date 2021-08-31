@@ -1,4 +1,5 @@
 import TypeAnimated from '../components/TypeAnimated'
+import Button from '../components/Button'
 import SocialIcons from '../components/SocialIcons'
 import FirstImage from '../images/women_generated.jpg'
 import '../scss/home.scss'
@@ -21,7 +22,7 @@ export default function Home() {
           <TypeAnimated text="and making my code as clean and understanble as possible." timeToComplete={700} />
         </p>
 
-        <button className="__know-me-button">Know me better → </button>
+        <Button text="Know me better →" />
         <SocialIcons />
       </div>
     </div>

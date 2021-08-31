@@ -1,5 +1,6 @@
 import illustration from '../images/about.jpg'
 import TypeAnimated from '../components/TypeAnimated'
+import Button from '../components/Button'
 import '../scss/about.scss'
 
 export default function About() {
@@ -31,9 +32,9 @@ export default function About() {
 
           <p>I like dogs, scuba diver and sailing, and discover the world trough different views.</p>
 
-          <span>Get in touch and let's do something great together</span>
+          <span className="__light">Get in touch and let's do something great together</span>
         </div>
-        <button>Contact me</button>
+        <Button text="Contact-me → " />
       </div>
     </div>
   )
