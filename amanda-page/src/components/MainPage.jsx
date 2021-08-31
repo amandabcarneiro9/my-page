@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 import Home from '../sections/Home'
 import Skills from '../sections/Skills'
-// import Projects from './Projects'
+import About from '../sections/About'
 // import Services from './Services'
 // import Instagram from './Instagram'
 // import Contact from './Contact'
@@ -22,6 +22,7 @@ export default function MainPage({ location }) {
     <>
       <Home />
       <Skills />
+      <About />
     </>
   )
 }

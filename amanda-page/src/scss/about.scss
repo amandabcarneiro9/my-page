@@ -1,0 +1,36 @@
+@import '../scss/colors.scss';
+@import '../scss/media-queries.scss';
+
+.about {
+  background-color: $third-color;
+  display: flex;
+  flex-direction: column;
+
+  .__image {
+    margin-top: 50px;
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      color: $forth-color;
+    }
+    img {
+      width: 420px;
+      height: 30%;
+    }
+  }
+
+  .__content {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 22px;
+
+    .__first-paragraph {
+      height: 100px;
+      margin-bottom: 30px;
+
+      .type-animated {
+        margin-left: 2px;
+      }
+    }
+  }
+}

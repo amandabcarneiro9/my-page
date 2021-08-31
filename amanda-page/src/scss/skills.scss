@@ -31,15 +31,21 @@
 
   .__skills-description {
     margin-top: 30px;
-    width: 50%;
-    h2 {
-      display: block;
-      color: $forth-color;
-      margin-bottom: 30px;
-      animation: fadeIn 100ms ease-out;
+    width: 60%;
+
+    .__title {
+      height: 100px;
+      margin-bottom: 20px;
+      h2 {
+        display: block;
+        color: $forth-color;
+        margin-bottom: 30px;
+        animation: fadeIn 100ms ease-out;
+      }
     }
   }
   .__skills-tags {
+    height: 50%;
     margin-bottom: 50px;
     animation: fadeIn 500ms ease-out;
     display: flex;
