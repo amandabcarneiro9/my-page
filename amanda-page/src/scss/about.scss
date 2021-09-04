@@ -33,7 +33,6 @@
         }
       }
       .__light {
-        color: $forth-color;
         font-family: 'Playfair Display', 'serif';
         text-transform: uppercase;
         font-weight: bold;
@@ -48,7 +47,6 @@
   @include for-desktop-and-large {
     flex-direction: row-reverse;
     justify-content: space-evenly;
-    // width: 100vw;
 
     .__image {
       display: flex;
