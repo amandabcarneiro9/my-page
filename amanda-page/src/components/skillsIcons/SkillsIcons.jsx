@@ -1,4 +1,4 @@
-import '../components/skillsIcons.scss'
+import './skillsIcons.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'

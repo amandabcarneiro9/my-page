@@ -1,6 +1,6 @@
-import TypeAnimated from '../components/TypeAnimated'
-import Button from '../components/Button'
-import SocialIcons from '../components/SocialIcons'
+import TypeAnimated from '../components/typeAnimated/TypeAnimated'
+import Button from '../components/button/Button'
+import SocialIcons from '../components/socialIcons/SocialIcons'
 import FirstImage from '../images/women_generated.jpg'
 import '../scss/home.scss'
 

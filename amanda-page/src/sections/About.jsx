@@ -1,6 +1,6 @@
 import illustration from '../images/about.jpg'
-import TypeAnimated from '../components/TypeAnimated'
-import Button from '../components/Button'
+import TypeAnimated from '../components/typeAnimated/TypeAnimated'
+import Button from '../components/button/Button'
 import '../scss/about.scss'
 
 export default function About() {

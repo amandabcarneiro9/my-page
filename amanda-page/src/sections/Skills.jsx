@@ -1,7 +1,7 @@
-import TypeAnimated from '../components/TypeAnimated'
-import SkillsIcons from '../components/SkillsIcons'
+import TypeAnimated from '../components/typeAnimated/TypeAnimated'
+import SkillsIcons from '../components/skillsIcons/SkillsIcons'
 import illustration from '../images/skills.png'
-import SocialIcons from '../components/SocialIcons'
+import SocialIcons from '../components/socialIcons/SocialIcons'
 
 import '../scss/skills.scss'
 

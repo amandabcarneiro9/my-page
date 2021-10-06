@@ -1,4 +1,4 @@
-import '../components/socialIcons.scss'
+import './socialIcons.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 

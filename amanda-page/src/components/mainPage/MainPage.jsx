@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 
-import Home from '../sections/Home'
-import Skills from '../sections/Skills'
-import About from '../sections/About'
+import Home from '../../sections/Home'
+import Skills from '../../sections/Skills'
+import About from '../../sections/About'
 // import Services from './Services'
 // import Instagram from './Instagram'
 // import Contact from './Contact'
