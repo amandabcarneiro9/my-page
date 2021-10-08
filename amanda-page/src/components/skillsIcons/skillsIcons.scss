@@ -29,8 +29,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: $forth-color;
-        font-size: 50px;
+
         backface-visibility: hidden;
         overflow: hidden;
         top: 0;
@@ -38,8 +37,9 @@
         width: 100%;
         height: 100%;
 
-        .__description {
-          color: yellow;
+        .__icon {
+          color: $forth-color;
+          font-size: 50px;
         }
       }
     }
@@ -50,7 +50,7 @@
   }
   .__face.--back {
     transform: rotateY(180deg);
-    background-color: lightgray;
+    background-color: $forth-color;
     color: white;
   }
 

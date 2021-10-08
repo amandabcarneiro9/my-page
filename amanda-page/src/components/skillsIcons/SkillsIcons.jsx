@@ -8,31 +8,31 @@ export default function SkillsIcons() {
   return (
     <div className="container">
       <IconCard description="html5">
-        <FontAwesomeIcon icon={['fab', 'html5']} />
+        <FontAwesomeIcon icon={['fab', 'html5']} className="__icon" />
       </IconCard>
       <IconCard description="css3">
-        <FontAwesomeIcon icon={['fab', 'css3']} />
+        <FontAwesomeIcon icon={['fab', 'css3']} className="__icon" />
       </IconCard>
       <IconCard description="javascript">
-        <FontAwesomeIcon icon={['fab', 'js']} />
+        <FontAwesomeIcon icon={['fab', 'js']} className="__icon" />
       </IconCard>
       <IconCard description="react">
-        <FontAwesomeIcon icon={['fab', 'react']} />
+        <FontAwesomeIcon icon={['fab', 'react']} className="__icon" />
       </IconCard>
       <IconCard description="PHP">
-        <FontAwesomeIcon icon={['fab', 'php']} />
+        <FontAwesomeIcon icon={['fab', 'php']} className="__icon" />
       </IconCard>
 
       <IconCard description="laravel">
-        <FontAwesomeIcon icon={['fab', 'laravel']} />
+        <FontAwesomeIcon icon={['fab', 'laravel']} className="__icon" />
       </IconCard>
 
       <IconCard description="sass">
-        <FontAwesomeIcon icon={['fab', 'sass']} />
+        <FontAwesomeIcon icon={['fab', 'sass']} className="__icon" />
       </IconCard>
 
       <IconCard description="database">
-        <FontAwesomeIcon icon={['fas', 'database']} />
+        <FontAwesomeIcon icon={['fas', 'database']} className="__icon" />
         <span className="__name">database</span>
       </IconCard>
 
