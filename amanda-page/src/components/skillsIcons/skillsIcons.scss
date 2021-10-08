@@ -2,13 +2,60 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 50px);
-  grid-template-rows: [row1-start] 50% [row1-end] 50%;
-  column-gap: 20px;
-  row-gap: 20px;
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: [row1-start] 150px [row2] 150px [row3-end] 150px;
+  column-gap: 50px;
+  row-gap: 50px;
+  position: relative;
+  justify-content: center;
+  // align-items: center;
 
-  .__icon {
-    color: $forth-color;
-    font-size: 50px;
+  .__card {
+    width: 200px;
+    height: 200px;
+    perspective: 400px;
+    position: relative;
+    justify-self: center;
+
+    .__flip {
+      width: 100%;
+      height: 100%;
+      transition: transform 600ms cubic-bezier(0.2, 0.85, 0.4, 1.275);
+      transform-style: preserve-3d;
+      position: relative;
+
+      .__face {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $forth-color;
+        font-size: 50px;
+        backface-visibility: hidden;
+        overflow: hidden;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        .__description {
+          color: yellow;
+        }
+      }
+    }
+  }
+
+  .__card:hover .__flip {
+    transform: rotateY(180deg);
+  }
+  .__face.--back {
+    transform: rotateY(180deg);
+    background-color: lightgray;
+    color: white;
+  }
+
+  .__next-logo {
+    width: 50px;
+    height: 50px;
   }
 }

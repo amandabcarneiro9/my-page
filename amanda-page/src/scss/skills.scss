@@ -32,6 +32,10 @@
   .__skills-description {
     margin-top: 30px;
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .__title {
       height: 100px;
@@ -51,6 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: center;
   }
 }
 

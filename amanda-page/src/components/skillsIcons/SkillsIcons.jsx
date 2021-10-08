@@ -1,4 +1,5 @@
 import './skillsIcons.scss'
+import nextJsImage from '../../images/next-js.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
@@ -6,31 +7,49 @@ import { Link } from 'react-router-dom'
 export default function SkillsIcons() {
   return (
     <div className="container">
-      <span className="__icon">
+      <IconCard description="html5">
         <FontAwesomeIcon icon={['fab', 'html5']} />
-      </span>
-      <span className="__icon">
+      </IconCard>
+      <IconCard description="css3">
         <FontAwesomeIcon icon={['fab', 'css3']} />
-      </span>
-      <span className="__icon">
+      </IconCard>
+      <IconCard description="javascript">
         <FontAwesomeIcon icon={['fab', 'js']} />
-      </span>
-      <span className="__icon">
-        {' '}
+      </IconCard>
+      <IconCard description="react">
         <FontAwesomeIcon icon={['fab', 'react']} />
-      </span>
-      <span className="__icon">
+      </IconCard>
+      <IconCard description="PHP">
         <FontAwesomeIcon icon={['fab', 'php']} />
-      </span>
-      <span className="__icon">
+      </IconCard>
+
+      <IconCard description="laravel">
         <FontAwesomeIcon icon={['fab', 'laravel']} />
-      </span>
-      <span className="__icon">
+      </IconCard>
+
+      <IconCard description="sass">
         <FontAwesomeIcon icon={['fab', 'sass']} />
-      </span>
-      <span className="__icon">
+      </IconCard>
+
+      <IconCard description="database">
         <FontAwesomeIcon icon={['fas', 'database']} />
-      </span>
+        <span className="__name">database</span>
+      </IconCard>
+
+      <IconCard description="nextJS">
+        <img src={nextJsImage} alt=" next-js logo" className="__next-logo" />
+      </IconCard>
+    </div>
+  )
+}
+
+function IconCard({ children, description }) {
+  return (
+    <div className="__card">
+      <div className="__flip">
+        <div className="__face">{children}</div>
+        <div className={['__face', '--back'].join(' ')}>{description}</div>
+      </div>
     </div>
   )
 }
