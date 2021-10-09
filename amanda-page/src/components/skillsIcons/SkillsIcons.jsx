@@ -30,7 +30,8 @@ export default function SkillsIcons() {
         title="Laravel"
         descriptionList={[
           'Sending emails',
-          'Authentication/Authorization',
+          'Authentication',
+          'Authorization',
           'Eloquent ORM',
           'API creation',
           'Server-side rendering',
@@ -68,7 +69,9 @@ function IconCard({ children, descriptionList, title }) {
         <div className="__face">{children}</div>
         <div className={['__face', '--back'].join(' ')}>
           <h3>{title}</h3>
-          <ul>{descriptionList && descriptionList.map((description) => <li>{description}</li>)}</ul>
+          <div className="__descriptions">
+            <ul>{descriptionList && descriptionList.map((description) => <li>{description}</li>)}</ul>
+          </div>
         </div>
       </div>
     </div>
