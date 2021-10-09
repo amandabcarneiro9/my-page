@@ -53,6 +53,10 @@ export default function SkillsIcons() {
       >
         <img src={nextJsImage} alt=" next-js logo" className="__next-logo" />
       </IconCard>
+
+      <IconCard title="GIT" descriptionList={['Branching', 'Code Reviews', 'Forks', 'Complic Resolution']}>
+        <FontAwesomeIcon icon={['fab', 'git-square']} className="__icon" />
+      </IconCard>
     </div>
   )
 }
