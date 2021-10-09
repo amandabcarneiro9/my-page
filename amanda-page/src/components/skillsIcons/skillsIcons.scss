@@ -1,21 +1,37 @@
 @import '../../scss/colors.scss';
+@import '../../scss/media-queries.scss';
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(4, 150px);
-  grid-template-rows: [row1-start] 150px [row2] 150px [row3-end] 150px;
-  column-gap: 50px;
-  row-gap: 50px;
-  position: relative;
-  justify-content: center;
-  // align-items: center;
+  @include for-phone {
+    display: flex;
+    flex-direction: column;
+  }
+  @include for-desktop-and-large {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: [row1-start] 150px [row2] 150px [row3-end] 150px;
+    column-gap: 50px;
+    row-gap: 50px;
+    position: relative;
+    justify-content: center;
+    // align-items: center;
+  }
 
   .__card {
-    width: 200px;
-    height: 200px;
-    perspective: 400px;
-    position: relative;
-    justify-self: center;
+    @include for-phone {
+      width: 300px;
+      margin-top: 50px;
+      background-color: white;
+      padding: 20px;
+    }
+
+    @include for-desktop-and-large {
+      width: 200px;
+      height: 200px;
+      perspective: 400px;
+      position: relative;
+      justify-self: center;
+    }
 
     .__flip {
       width: 100%;
@@ -25,17 +41,20 @@
       position: relative;
 
       .__face {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        // background-color: ;
 
-        backface-visibility: hidden;
-        overflow: hidden;
-        top: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @include for-desktop-and-large {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          backface-visibility: hidden;
+          overflow: hidden;
+          top: 0;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
 
         .__icon {
           color: $forth-color;
@@ -44,34 +63,64 @@
       }
     }
   }
-
-  .__card:hover .__flip {
-    transform: rotateY(180deg);
+  @include for-desktop-and-large {
+    .__card:hover .__flip {
+      transform: rotateY(180deg);
+    }
   }
+
   .__face.--back {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: rotateY(180deg);
-    background-color: $forth-color;
-    // padding: 30px;
-    color: white;
-    // margin-left: 10px;
     position: relative;
 
-    h3 {
-      text-transform: uppercase;
-      margin: 0;
-      position: absolute;
-      top: 10px;
+    @include for-phone {
+      font-size: 20px;
+      font-weight: 600;
+      color: $forth-color;
+      text-decoration: none;
+
+      h3 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(-100%);
+        margin: 0;
+        width: calc(100% - 50px);
+        text-align: left;
+        height: 50px;
+        line-height: 50px;
+        box-sizing: border-box;
+        padding-left: 44px;
+        color: $forth-color;
+        text-transform: uppercase;
+        font-size: 24px;
+      }
     }
 
-    .__descriptions {
-      padding-bottom: 30px;
-      position: absolute;
-      top: 12%;
-      left: 10%;
+    @include for-desktop-and-large {
+      justify-content: center;
+      align-items: center;
+      transform: rotateY(180deg);
+      background-color: $forth-color;
+      // padding: 30px;
+      color: white;
+      // margin-left: 10px;
+      position: relative;
+
+      h3 {
+        text-transform: uppercase;
+        margin: 0;
+        position: absolute;
+        top: 10px;
+      }
+
+      .__descriptions {
+        padding-bottom: 30px;
+        position: absolute;
+        top: 12%;
+        left: 10%;
+      }
     }
   }
 
