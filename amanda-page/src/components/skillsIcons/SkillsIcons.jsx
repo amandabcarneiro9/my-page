@@ -70,7 +70,9 @@ function IconCard({ children, descriptionList, title }) {
         <div className={['__face', '--back'].join(' ')}>
           <h3>{title}</h3>
           <div className="__descriptions">
-            <ul>{descriptionList && descriptionList.map((description) => <li>{description}</li>)}</ul>
+            <ul>
+              {descriptionList && descriptionList.map((description, index) => <li key={index}>{description}</li>)}
+            </ul>
           </div>
         </div>
       </div>

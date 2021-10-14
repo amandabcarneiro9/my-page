@@ -6,8 +6,8 @@ import '../scss/about.scss'
 export default function About() {
   return (
     <div className="about">
+      <a name="about" />
       <div className="__image">
-        {' '}
         <h2>About me</h2>
         <img src={illustration} alt=" illustration from people doing things" />
       </div>

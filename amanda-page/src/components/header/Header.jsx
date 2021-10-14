@@ -7,21 +7,25 @@ import './header.scss'
 export default function Header() {
   const [isOpen, setOpen] = useState(false)
 
-  function linkClick() {
+  function linkClick(event) {
+    const link = event.currentTarget.href.split('/').pop()
+    const element = document.querySelector(`[name=${link}]`)
+    element && element.scrollIntoView({ behavior: 'smooth' })
     setOpen(false)
   }
   return (
     <header className={`header ${isOpen ? '--menu-opened' : ''}`}>
       <Hamburger toggled={isOpen} toggle={setOpen} />
       <div className="__nav-links">
-        <Link className="__link" onClick={linkClick}>
+        <Link to="/" className="__link" onClick={linkClick}>
           Home
         </Link>
-        <Link className="__link" onClick={linkClick}>
-          About me
-        </Link>
-        <Link className="__link" onClick={linkClick}>
+
+        <Link to="/skills" className="__link" onClick={linkClick}>
           My Skills
+        </Link>
+        <Link to="/about" className="__link" onClick={linkClick}>
+          About me
         </Link>
         <Link className="__link" onClick={linkClick}>
           Work as a Junior

@@ -3,7 +3,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import '../src/scss/app.scss'
 
 import Header from './components/header/Header'
@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <MainPage />
+        <Route path="/" component={MainPage} />
       </BrowserRouter>
     </div>
   )
