@@ -13,6 +13,7 @@ export default function Portfolio() {
           projectTitle="Pluris Engenharia"
           description="Front-end Application made with Nextjs"
           gifName={plurisGif}
+          href="/portfolio/pluris-project"
         />
 
         <Project
@@ -31,14 +32,14 @@ export default function Portfolio() {
   )
 }
 
-function Project({ projectTitle, description, gifName }) {
+function Project({ projectTitle, description, gifName, href }) {
   return (
     <div className="__project">
       <div className="__infos">
         <h3 className="__project-title">{projectTitle}</h3>
         <span className="__description"> {description}</span>
       </div>
-      <Button text="Discover More" />
+      <Button text="Discover More" href={href} />
       <div className="__project-gif">
         <img src={gifName} alt="gif from website" />
       </div>

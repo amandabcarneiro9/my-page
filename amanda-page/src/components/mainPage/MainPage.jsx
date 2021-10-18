@@ -13,7 +13,7 @@ export default function MainPage({ location }) {
       const link = pathname.slice(1)
       if (!link) return
 
-      const element = document.querySelector(`[name=${link}]`)
+      const element = document.querySelector(`[name="${link}"]`)
       element && element.scrollIntoView({ behavior: 'smooth' })
     }, 200)
   }, [pathname])

@@ -17,7 +17,7 @@ export default function Header() {
     <header className={`header ${isOpen ? '--menu-opened' : ''}`}>
       <Hamburger toggled={isOpen} toggle={setOpen} />
       <div className="__nav-links">
-        <Link to="/" className="__link" onClick={linkClick}>
+        <Link to="/" className="__link">
           Home
         </Link>
 
