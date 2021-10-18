@@ -9,7 +9,10 @@
   .__title {
     text-transform: uppercase;
     text-align: center;
+    font-size: 30px;
     color: $second-color;
+    margin-top: 100px;
+    margin-bottom: 50px;
   }
   .__projects {
     display: flex;
@@ -26,19 +29,27 @@
       width: 78%;
 
       @include for-phone {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas:
+          'infos'
+          'gif'
+          'button';
         width: 400px;
       }
 
       @include for-desktop-and-large {
         display: grid;
         grid-template-columns: 600px 600px;
-        grid-template-areas: 'infos gif';
+        grid-template-areas:
+          'infos gif'
+          'button gif';
         column-gap: 34px;
 
         &:nth-child(even) {
-          grid-template-areas: 'gif infos';
+          grid-template-areas:
+            'gif infos'
+            'gif button';
         }
       }
 
@@ -49,18 +60,19 @@
         align-items: center;
         justify-self: center;
         grid-area: infos;
+
         @include for-phone {
-          height: 300px;
+          margin-bottom: 50px;
         }
 
-        .__title {
+        .__project-title {
           color: $forth-color;
           font-size: 30px;
         }
         .__description {
           font-size: 20px;
           text-align: center;
-          padding: 20px;
+          //   padding: 20px;
         }
       }
 
@@ -72,6 +84,18 @@
           }
           width: 600px;
           height: 400px;
+        }
+      }
+
+      .button {
+        width: 200px;
+        height: 50px;
+        align-self: center;
+        justify-self: center;
+
+        @include for-phone {
+          margin-bottom: 50px;
+          margin-top: 50px;
         }
       }
     }

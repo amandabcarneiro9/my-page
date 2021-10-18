@@ -35,10 +35,10 @@ function Project({ projectTitle, description, gifName }) {
   return (
     <div className="__project">
       <div className="__infos">
-        <h3 className="__title">{projectTitle}</h3>
+        <h3 className="__project-title">{projectTitle}</h3>
         <span className="__description"> {description}</span>
-        <Button text="Discover More" />
       </div>
+      <Button text="Discover More" />
       <div className="__project-gif">
         <img src={gifName} alt="gif from website" />
       </div>
