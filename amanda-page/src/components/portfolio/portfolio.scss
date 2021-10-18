@@ -23,7 +23,7 @@
       margin-top: 50px;
       margin-bottom: 50px;
       background-color: white;
-      width: 80%;
+      width: 78%;
 
       @include for-phone {
         display: flex;
@@ -32,11 +32,13 @@
       }
 
       @include for-desktop-and-large {
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 600px 600px;
+        grid-template-areas: 'infos gif';
+        column-gap: 34px;
 
         &:nth-child(even) {
-          flex-direction: row-reverse;
+          grid-template-areas: 'gif infos';
         }
       }
 
@@ -45,7 +47,8 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-
+        justify-self: center;
+        grid-area: infos;
         @include for-phone {
           height: 300px;
         }
@@ -57,11 +60,12 @@
         .__description {
           font-size: 20px;
           text-align: center;
-          margin-bottom: 10px;
+          padding: 20px;
         }
       }
 
       .__project-gif {
+        grid-area: gif;
         img {
           @include for-phone {
             width: 400px;
