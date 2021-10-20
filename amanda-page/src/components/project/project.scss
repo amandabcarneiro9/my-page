@@ -1,0 +1,7 @@
+.project-section {
+  display: flex;
+}
+
+.project-section:nth-child(odd) {
+  flex-direction: row-reverse;
+}
