@@ -7,6 +7,7 @@ import Button from '../button/Button'
 export default function Portfolio() {
   return (
     <div className="portfolio">
+      <a name="portfolio" />
       <h2 className="__title">This is some of projects that I have done</h2>
       <div className="__projects">
         <Project

@@ -30,7 +30,7 @@ export default function Header() {
         <Link className="__link" onClick={linkClick}>
           Work as a Junior
         </Link>
-        <Link className="__link" onClick={linkClick}>
+        <Link to="/portfolio" className="__link" onClick={linkClick}>
           Portfolio
         </Link>
         <Link className="__link" onClick={linkClick}>
