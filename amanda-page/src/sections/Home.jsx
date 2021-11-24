@@ -22,7 +22,7 @@ export default function Home() {
           <TypeAnimated text="and making my code as clean and understanble as possible." timeToComplete={700} />
         </p>
 
-        <Button text="Know me better →" />
+        <Button href="/about" text="Know me better →" />
         <SocialIcons />
       </div>
     </div>
