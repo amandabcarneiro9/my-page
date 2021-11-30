@@ -67,7 +67,9 @@ export function ProjectSectionOverview({
 
         <div className="__overview-information __links">
           <h3>See more about the code here:</h3>
-          <a href={href}>Github repository </a>
+          <a href={href} target="_blank" rel="noreferrer">
+            Github repository{' '}
+          </a>
           <a href={href2}>Link site Heroku</a>
         </div>
       </div>
