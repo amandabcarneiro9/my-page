@@ -51,6 +51,7 @@
     'metadata description';
   column-gap: 50px;
   margin-top: 100px;
+  margin-left: 20px;
 
   .__texts {
     text-align: center;
@@ -126,6 +127,8 @@
     .__overview-information {
       text-align: center;
       font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
 
       h3 {
         text-transform: uppercase;

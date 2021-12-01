@@ -8,7 +8,7 @@ import '../src/scss/app.scss'
 
 import Header from './components/header/Header'
 import MainPage from './components/mainPage/MainPage'
-import PlurisProject from './pages/Projects'
+import { PlurisProject, DasTravel } from './pages/Projects'
 
 library.add(fab, far, fas)
 
@@ -19,6 +19,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/portfolio/pluris-project" component={PlurisProject} />
+          <Route path="/portfolio/das-travel-project" component={DasTravel} />
           <Route path="/" component={MainPage} />
         </Switch>
       </BrowserRouter>

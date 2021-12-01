@@ -21,6 +21,7 @@ export default function Portfolio() {
           projectTitle="DAS travel App"
           description="Single Page Application made  with PHP/Laravel and React.js"
           gifName={dasGif}
+          href="/portfolio/das-travel-project"
         />
 
         <Project
