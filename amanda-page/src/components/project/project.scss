@@ -8,7 +8,7 @@
 
   .__content {
     font-family: sans-serif;
-    font-size: 24px;
+    // font-size: 2vw;
     color: $primary-color;
   }
 
@@ -16,10 +16,14 @@
     text-transform: uppercase;
     color: $forth-color;
     text-shadow: black 2px 2px 20px 0px;
-    font-size: 30px;
+    font-size: 3vw;
     position: relative;
     text-align: center;
     margin-top: 100px;
+
+    @include for-phone {
+      font-size: 4vw;
+    }
 
     &::after,
     &::before {
@@ -27,31 +31,46 @@
       display: block;
       background-color: $second-color;
       height: 5px;
-      width: 200px;
+      width: 25%;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+
+      @include for-phone {
+        width: 100px;
+      }
     }
 
     &::before {
       left: calc(50% + 200px);
+      @include for-phone {
+        left: 4px;
+      }
     }
 
     &::after {
       right: calc(50% + 200px);
+
+      @include for-phone {
+        right: 4px;
+      }
     }
   }
 }
 
 .project-section {
-  display: grid;
-  grid-template-columns: 600px auto;
-  grid-template-areas:
-    'metadata title'
-    'metadata description';
-  column-gap: 50px;
-  margin-top: 100px;
-  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  @include for-desktop-and-large {
+    display: grid;
+    grid-template-columns: 600px auto;
+    grid-template-areas:
+      'metadata title'
+      'metadata description';
+    column-gap: 50px;
+    // margin-top: 100px;
+    margin-left: 20px;
+  }
 
   .__texts {
     text-align: center;
@@ -59,16 +78,23 @@
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
     padding: 20px;
     grid-area: description;
+
+    @include for-desktop-and-large {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
   }
 
   .__metadata {
-    width: 600px;
-    height: 500px;
-    grid-area: metadata;
+    width: 350px;
+    align-self: center;
+    @include for-desktop-and-large {
+      width: 600px;
+      height: 500px;
+      grid-area: metadata;
+    }
     box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 20px 0px;
     box-sizing: border-box;
     border: 1px solid rgb(255, 255, 255);
@@ -80,6 +106,10 @@
     text-align: start;
     grid-area: title;
     font-family: 'Playfair Display';
+
+    @include for-desktop-and-large {
+      font-size: 2.5vw;
+    }
 
     &::before {
       content: '';
@@ -93,13 +123,20 @@
 .project-section-overview {
   display: flex;
   flex-direction: column;
-  margin: 100px;
+
+  @include for-desktop-and-large {
+    margin: 100px;
+  }
 
   .__title {
     text-transform: uppercase;
     color: $forth-color;
     grid-area: title;
     font-family: 'Playfair Display';
+
+    @include for-desktop-and-large {
+      font-size: 2.5vw;
+    }
 
     &::before {
       content: '';
@@ -111,24 +148,36 @@
   }
 
   .__overview-information-card {
-    justify-self: end;
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: auto;
-    justify-content: center;
-    row-gap: 50px;
     background-color: $third-color;
     box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 20px 0px;
     box-sizing: border-box;
     border: 1px solid rgb(255, 255, 255);
     grid-area: card;
     padding: 36px 0;
+    @include for-phone {
+      width: 80%;
+      align-self: center;
+    }
+    @include for-desktop-and-large {
+      justify-self: end;
+      display: grid;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: auto;
+      justify-content: center;
+      row-gap: 50px;
+      column-gap: 36px;
+    }
 
     .__overview-information {
-      text-align: center;
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
+      @include for-phone {
+        padding: 10px;
+      }
+      @include for-desktop-and-large {
+        text-align: center;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+      }
 
       h3 {
         text-transform: uppercase;
