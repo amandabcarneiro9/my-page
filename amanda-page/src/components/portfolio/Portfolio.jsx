@@ -28,6 +28,7 @@ export default function Portfolio() {
           projectTitle="Camilla Chagas Interiores"
           description="Rebuild a website from wix to a React.Js Single Page Application"
           gifName={camillaGif}
+          href="/portfolio/camilla-chagas-project"
         />
       </div>
     </div>

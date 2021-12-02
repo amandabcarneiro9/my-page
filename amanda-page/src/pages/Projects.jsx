@@ -30,7 +30,7 @@ export function PlurisProject() {
 export function DasTravel() {
   return (
     <ProjectType projectName="DAS Travel App">
-      <ProjectSectionImage image={dasGif}>
+      <ProjectSectionImage image={camillaGif}>
         It was a final project from a Bootcamp. The goal was to offer a single-page application that cover some
         technologies that were taught during the Bootcamp as PHP, Laravel, React, and Javascript. The application offers
         to users a brief experience during travel to one of those 3 cities (Warsaw, Rio de Janeiro, and
@@ -48,6 +48,29 @@ export function DasTravel() {
         href="https://github.com/Hourja/sad-final-project"
         nextSteps="As we use the domain and host from Bootcamp, we are on the way to transfer to our domain and host on Godaddy."
         goal="Offer a new way to travel for people who love to travel and to know about about the languages from the places where they goes."
+      />
+    </ProjectType>
+  )
+}
+
+export function CamillaProject() {
+  return (
+    <ProjectType projectName="Camilla Chagas Interiores">
+      <ProjectSectionImage image={camillaGif}>
+        In this project the goal was take the site from Wix plataform and re-create with new features but preserving the
+        design. The Web Site is made with React.js, with simple features, and a contact form. At first the site is on
+        Heroku plataform just for approve and some adjust from client side, when It's done the deploy will be on AWS
+        services. As the project already have a design, I just needed to follow it and use React and their features to
+        build a best version from the first one.
+      </ProjectSectionImage>
+      <ProjectSectionOverview
+        roleDescriptions="Web developer"
+        methodsDescription="Javascript, CSS/Sass, BEM, React.js, Heroku, GitHub, webpack, React Router,fontawesome."
+        durationDescription="3 weeks"
+        status="waiting for client approve"
+        href="https://github.com/amandabcarneiro9/camilla-chagas-project"
+        nextSteps="Do the deploy on AWS"
+        goal="Re build the site from Wix Plataform to React.js "
       />
     </ProjectType>
   )
