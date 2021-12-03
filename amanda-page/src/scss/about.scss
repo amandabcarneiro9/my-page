@@ -10,7 +10,9 @@
 
   .__image {
     margin-top: 50px;
-    margin-left: 50px;
+    @include for-desktop-and-large {
+      margin-left: 50px;
+    }
 
     h2 {
       text-align: center;
@@ -20,6 +22,10 @@
     img {
       width: 420px;
       height: 30%;
+
+      @include for-phone {
+        width: 100%;
+      }
     }
   }
   .__texts {

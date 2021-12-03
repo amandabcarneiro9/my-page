@@ -34,7 +34,7 @@
           'infos'
           'gif'
           'button';
-        width: 400px;
+        width: 100%;
       }
 
       @include for-desktop-and-large {
@@ -79,7 +79,7 @@
         grid-area: gif;
         img {
           @include for-phone {
-            width: 400px;
+            width: 100%;
           }
           width: 600px;
           height: 400px;
