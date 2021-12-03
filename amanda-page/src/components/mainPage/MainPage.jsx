@@ -4,6 +4,7 @@ import Home from '../../sections/Home'
 import Skills from '../../sections/Skills'
 import About from '../../sections/About'
 import Portfolio from '../portfolio/Portfolio'
+import ContactForm from '../../sections/ContactForm'
 
 export default function MainPage({ location }) {
   console.log(location)
@@ -24,6 +25,7 @@ export default function MainPage({ location }) {
       <Skills />
       <About />
       <Portfolio />
+      <ContactForm />
     </>
   )
 }
