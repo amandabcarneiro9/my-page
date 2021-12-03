@@ -20,6 +20,9 @@
     position: relative;
     text-align: center;
     margin-top: 100px;
+    @include for-phone {
+      width: 100%;
+    }
 
     @include for-phone {
       font-size: 4vw;
@@ -34,26 +37,19 @@
       width: 25%;
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-40%);
 
       @include for-phone {
-        width: 100px;
+        width: 18%;
       }
     }
 
     &::before {
-      left: calc(50% + 200px);
-      @include for-phone {
-        left: 4px;
-      }
+      left: 0;
     }
 
     &::after {
-      right: calc(50% + 200px);
-
-      @include for-phone {
-        right: 4px;
-      }
+      right: 0;
     }
   }
 }
