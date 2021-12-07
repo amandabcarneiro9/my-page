@@ -78,11 +78,16 @@
       .__project-gif {
         grid-area: gif;
         img {
+          width: 600px;
+          height: 400px;
+
           @include for-phone {
             width: 100%;
           }
-          width: 600px;
-          height: 400px;
+
+          @include for-new-tablets {
+            width: 100%;
+          }
         }
       }
 

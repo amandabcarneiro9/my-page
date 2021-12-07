@@ -10,7 +10,7 @@ export default function Header() {
   function linkClick(event) {
     const link = event.currentTarget.href.split('/').pop()
     const element = document.querySelector(`[name=${link}]`)
-    element && element.scrollIntoView({ behavior: 'smooth' })
+    element && element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     setOpen(false)
   }
   return (
