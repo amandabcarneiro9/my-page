@@ -36,8 +36,8 @@ export default function ContactForm() {
         <div className="__infos">
           <img src={contactImage} alt="" />
           <p>Did you like my job ?</p>
-          <p>Do you want talk about some ideas for projects ?</p>
-          <span>Dont hesitate to contact me! Let's make plans together! </span>
+          <p>Do you want to talk about some ideas for projects ?</p>
+          <span>Don't hesitate to contact me! Let's make plans together! </span>
         </div>
         <form action="" className="__form" onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>

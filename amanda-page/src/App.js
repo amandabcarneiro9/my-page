@@ -5,6 +5,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import '../src/scss/app.scss'
+import Footer from './components/footer/Footer'
 
 import Header from './components/header/Header'
 import MainPage from './components/mainPage/MainPage'
@@ -23,6 +24,7 @@ function App() {
           <Route path="/portfolio/camilla-chagas-project" component={CamillaProject} />
           <Route path="/" component={MainPage} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   )

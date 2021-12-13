@@ -1,0 +1,46 @@
+@import '../../scss/colors.scss';
+@import '../../scss/media-queries.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $forth-color;
+  text-align: center;
+
+  .__icons {
+    margin-top: 20px;
+
+    .__media-links {
+      a {
+        font-size: 30px;
+        color: $forth-color;
+
+        &:hover {
+          color: $second-color;
+        }
+      }
+    }
+  }
+
+  .__call-action {
+    font-size: 30px;
+    // color: $forth-color;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+
+  .__informations {
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: sans-serif;
+  }
+
+  .__made-by {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: $forth-color;
+  }
+}
