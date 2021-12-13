@@ -7,7 +7,7 @@ import Portfolio from '../portfolio/Portfolio'
 import ContactForm from '../../sections/ContactForm'
 
 export default function MainPage({ location }) {
-  console.log(location)
+  // console.log(location)
   const { pathname } = location
   useEffect(() => {
     setTimeout(() => {

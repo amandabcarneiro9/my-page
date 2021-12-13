@@ -33,8 +33,8 @@ export default function Header() {
         <Link to="/portfolio" className="__link" onClick={linkClick}>
           Portfolio
         </Link>
-        <Link className="__link" onClick={linkClick}>
-          Contact me{' '}
+        <Link to="/contact-form" className="__link" onClick={linkClick}>
+          Contact me
         </Link>
       </div>
     </header>
