@@ -1,7 +1,6 @@
 import TypeAnimated from '../components/typeAnimated/TypeAnimated'
 import SkillsIcons from '../components/skillsIcons/SkillsIcons'
 import illustration from '../images/skills.png'
-import SocialIcons from '../components/socialIcons/SocialIcons'
 
 import '../scss/skills.scss'
 
@@ -9,9 +8,7 @@ export default function Skills() {
   return (
     <a name="skills">
       <div className="skills">
-        <div className="__second-illustration">
-          <img src={illustration} alt="illustration of people working on computer" />
-        </div>
+        <img className="__second-illustration" src={illustration} alt="illustration of people working on computer" />
 
         <div className="__skills-description">
           <div className="__title">
@@ -20,9 +17,7 @@ export default function Skills() {
             </h2>
           </div>
 
-          <div className="__skills-tags">
-            <SkillsIcons />
-          </div>
+          <SkillsIcons />
         </div>
       </div>
     </a>

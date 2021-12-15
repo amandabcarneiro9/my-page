@@ -10,9 +10,6 @@
 
   .__image {
     margin-top: 50px;
-    @include for-desktop-and-large {
-      margin-left: 50px;
-    }
 
     h2 {
       text-align: center;
@@ -20,12 +17,9 @@
       color: $forth-color;
     }
     img {
-      width: 420px;
-      height: 30%;
-
-      @include for-phone {
-        width: 100%;
-      }
+      width: 80%;
+      margin: 0 auto;
+      display: block;
     }
   }
   .__texts {
@@ -55,29 +49,28 @@
 
   @include for-desktop-and-large {
     display: grid;
-    grid-template-columns: 600px 600px;
+    grid-template-columns: 48% 48%;
     grid-template-areas: 'texts images';
     justify-content: center;
-    column-gap: 100px;
 
     .__image {
       grid-area: images;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       h2 {
         display: none;
       }
       img {
-        width: 600px;
-        height: 500px;
+        width: 100%;
       }
     }
 
     .__texts {
       grid-area: texts;
-      width: 600px;
       margin-top: 50px;
       margin-bottom: 50px;
-      margin-right: 100px;
     }
   }
 }

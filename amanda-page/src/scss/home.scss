@@ -29,8 +29,10 @@
   .__presentation {
     text-align: center;
     animation: fadeIn 500ms ease-out;
+    padding-bottom: 30px;
 
     @include for-desktop-and-large {
+      padding-bottom: 0;
       text-align: left;
       padding: 2px 112px;
       justify-self: flex-end;
