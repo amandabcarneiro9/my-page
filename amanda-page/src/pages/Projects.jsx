@@ -12,14 +12,16 @@ export function PlurisProject() {
         well to attend client's desires.So I chose NextJs that was perfectly for this project. This frame work offers a
         lot of features that could help to make the page Server Side Rendering using React.js and for me as a junior
         helped me to improve the organization of the folder's structure. Also, one of the features that I used in this
-        project from Next.js was Image. This feature gives the basic stuff that you need for sizing and make the image
+        project from Next.js was Image. This feature gives the basic that you need for sizing and make the image
         look as you want without touching CSS directly.
       </ProjectSectionImage>
       <ProjectSectionOverview
         roleDescriptions="Web developer"
-        methodsDescription="Next.js, Sass, Heroku deploy, AWS S3"
+        methodsDescription="Next.js, Sass, Heroku deploy"
         durationDescription="8 weeks"
-        status="waiting for client approve for deploy"
+        status="on air by Heroku"
+        nextSteps="Add content to Galeria de Projetos page, with photos and descriptions for all services done by the company. Also make the send message work propely.  "
+        goal="Make a easy to naviagte and well explaned site, with the information that the users need to know the company and their services."
         href="https://github.com/amandabcarneiro9/pluris-engenharia"
         href2="https://pluris-engenharia.herokuapp.com/"
       />
@@ -30,7 +32,7 @@ export function PlurisProject() {
 export function DasTravel() {
   return (
     <ProjectType projectName="DAS Travel App">
-      <ProjectSectionImage image={camillaGif}>
+      <ProjectSectionImage image={dasGif}>
         It was a final project from a Bootcamp. The goal was to offer a single-page application that cover some
         technologies that were taught during the Bootcamp as PHP, Laravel, React, and Javascript. The application offers
         to users a brief experience during travel to one of those 3 cities (Warsaw, Rio de Janeiro, and
@@ -44,9 +46,10 @@ export function DasTravel() {
         roleDescriptions="Full stack Web developer"
         methodsDescription="PHP,Laravel, MySql, CSS/Sass, HTML5, React.js, Composer, Webpack, Firezilla, Agile"
         durationDescription="3 weeks"
-        status="Done but not on the air "
+        status="Done  "
         href="https://github.com/Hourja/sad-final-project"
-        nextSteps="As we use the domain and host from Bootcamp, we are on the way to transfer to our domain and host on Godaddy."
+        href2 ="https://dastravelapp.eu/"
+        nextSteps="Improve our code to make it cleaner, and readble as possible"
         goal="Offer a new way to travel for people who love to travel and to know about about the languages from the places where they goes."
       />
     </ProjectType>
@@ -67,10 +70,10 @@ export function CamillaProject() {
         roleDescriptions="Web developer"
         methodsDescription="Javascript, CSS/Sass, BEM, React.js, Heroku, GitHub, webpack, React Router,fontawesome."
         durationDescription="3 weeks"
-        status="waiting for client approve"
+        status="waiting for some details from client to do the deploy"
         href="https://github.com/amandabcarneiro9/camilla-chagas-project"
         nextSteps="Do the deploy on AWS"
-        goal="Re build the site from Wix Plataform to React.js "
+        goal="Rebuild the site from Wix Plataform to React.js "
       />
     </ProjectType>
   )

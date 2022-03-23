@@ -70,7 +70,7 @@ export function ProjectSectionOverview({
           <a href={href} target="_blank" rel="noreferrer">
             Github repository{' '}
           </a>
-          <a href={href2}>Link site Heroku</a>
+          <a href={href2} target="_blank" rel="noreferrer">Link site </a>
         </div>
       </div>
     </div>
