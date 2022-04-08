@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Hamburger from 'hamburger-react'
 import { useState } from 'react'
+import AmandaLogo from '../../images/logo_size.jpg'
 
 import './header.scss'
 
@@ -17,25 +18,26 @@ export default function Header() {
     <header className={`header ${isOpen ? '--menu-opened' : ''}`}>
       <Hamburger toggled={isOpen} toggle={setOpen} />
       <div className="__nav-links">
+        <div className='amanda-logo'>
         <Link to="/" className="__link">
-          Home
+          <img src={AmandaLogo} alt="Amanda's logo" />
         </Link>
-
-        <Link to="/skills" className="__link" onClick={linkClick}>
-          My Skills
+          </div>
+<div className='__links'>
+  <Link to="/skills" className="__link" onClick={linkClick}>
+          Skills
         </Link>
         <Link to="/about" className="__link" onClick={linkClick}>
-          About me
+          About 
         </Link>
-        <Link className="__link" onClick={linkClick}>
-          Work as a Junior
-        </Link>
+        
         <Link to="/portfolio" className="__link" onClick={linkClick}>
-          Portfolio
+          Work
         </Link>
         <Link to="/contact-form" className="__link" onClick={linkClick}>
           Contact me
-        </Link>
+        </Link></div>
+        
       </div>
     </header>
   )
