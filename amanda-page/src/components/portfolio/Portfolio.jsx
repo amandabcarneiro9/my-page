@@ -1,3 +1,4 @@
+import React from 'react'
 import plurisGif from '../../images/pluris-certo.gif'
 import dasGif from '../../images/das-travel.gif'
 import camillaGif from '../../images/camilla-chagas.gif'

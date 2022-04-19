@@ -1,3 +1,4 @@
+import React from 'react'
 import './errors.scss'
 
 export default function Errors({ errors }) {
@@ -6,8 +7,10 @@ export default function Errors({ errors }) {
   return (
     <div className="errors">
       <ul>
-        {errors.map((error) => (
-          <li className="__error">{error}</li>
+        {errors.map((error, index) => (
+          <li className="__error" key={index}>
+            {error}
+          </li>
         ))}
       </ul>
     </div>

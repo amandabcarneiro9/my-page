@@ -1,3 +1,4 @@
+import React from 'react'
 import TypeAnimated from '../components/typeAnimated/TypeAnimated'
 import Button from '../components/button/Button'
 import SocialIcons from '../components/socialIcons/SocialIcons'

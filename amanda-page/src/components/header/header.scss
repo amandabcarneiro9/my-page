@@ -4,21 +4,34 @@
 header {
   .__nav-links {
     display: none;
+    
   }
   @include for-desktop-and-large {
     display: flex;
-    height: 10vh;
+    height:18vh;
     align-items: center;
     justify-content: center;
+    background-color: $background-grey;
 
     .__nav-links {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1400px;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
+      .__amanda-logo{
+        justify-content: flex-start;
+        .__logo{
+          width: 40px;
+        }
+      }
+
       .__links{
+        display: flex;
+        width: 40%;
+        justify-content: space-around;
+        
       .__link {
         color: $forth-color;
         text-decoration: none;

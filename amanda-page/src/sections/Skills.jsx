@@ -1,3 +1,4 @@
+import React from 'react'
 import TypeAnimated from '../components/typeAnimated/TypeAnimated'
 import SkillsIcons from '../components/skillsIcons/SkillsIcons'
 import illustration from '../images/skills.png'

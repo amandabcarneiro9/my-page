@@ -1,15 +1,23 @@
+import React, { useState } from 'react'
 import '../scss/contactForm.scss'
-import { useState } from 'react'
 import contactImage from '../images/junior.jpg'
 import Errors from '../components/errors/Errors'
 
 export default function ContactForm() {
-  const [contactState, setContactState] = useState({ name: '', email: '', subject: '', message: '' })
+  const [contactState, setContactState] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  })
   const [errors, setErrors] = useState([])
   const { name, email, subject, message } = contactState
 
   function updateState({ currentTarget }) {
-    setContactState({ ...contactState, [currentTarget.name]: currentTarget.value })
+    setContactState({
+      ...contactState,
+      [currentTarget.name]: currentTarget.value,
+    })
   }
 
   function handleSubmit(event) {
@@ -20,7 +28,7 @@ export default function ContactForm() {
         name.trim() === '' && 'Fill the name',
         subject.trim() === '' && 'Fill the subject',
         message.trim() === '' && 'Fill the message',
-      ].filter(Boolean)
+      ].filter(Boolean),
     )
 
     return console.log(contactState)

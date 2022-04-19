@@ -1,4 +1,5 @@
-import ProjectType, { ProjectSectionImage, ProjectSectionOverview, ProjectDetails } from '../components/project/Project'
+import React from 'react'
+import ProjectType, { ProjectSectionImage, ProjectSectionOverview } from '../components/project/Project'
 import plurisGif from '../images/pluris-certo.gif'
 import dasGif from '../images/das-travel.gif'
 import camillaGif from '../images/camilla-chagas.gif'
@@ -12,8 +13,8 @@ export function PlurisProject() {
         well to attend client's desires.So I chose NextJs that was perfectly for this project. This frame work offers a
         lot of features that could help to make the page Server Side Rendering using React.js and for me as a junior
         helped me to improve the organization of the folder's structure. Also, one of the features that I used in this
-        project from Next.js was Image. This feature gives the basic that you need for sizing and make the image
-        look as you want without touching CSS directly.
+        project from Next.js was Image. This feature gives the basic that you need for sizing and make the image look as
+        you want without touching CSS directly.
       </ProjectSectionImage>
       <ProjectSectionOverview
         roleDescriptions="Web developer"
@@ -48,7 +49,7 @@ export function DasTravel() {
         durationDescription="3 weeks"
         status="Done  "
         href="https://github.com/Hourja/sad-final-project"
-        href2 ="https://dastravelapp.eu/"
+        href2="https://dastravelapp.eu/"
         nextSteps="Improve our code to make it cleaner, and readble as possible"
         goal="Offer a new way to travel for people who love to travel and to know about about the languages from the places where they goes."
       />

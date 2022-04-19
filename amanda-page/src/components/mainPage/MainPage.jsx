@@ -1,11 +1,10 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 import Home from '../../sections/Home'
 import Skills from '../../sections/Skills'
 import About from '../../sections/About'
 import Portfolio from '../portfolio/Portfolio'
 import ContactForm from '../../sections/ContactForm'
-import Footer from '../footer/Footer'
 
 export default function MainPage({ location }) {
   // console.log(location)

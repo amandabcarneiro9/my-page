@@ -1,3 +1,4 @@
+import React from 'react'
 import illustration from '../images/about.jpg'
 import TypeAnimated from '../components/typeAnimated/TypeAnimated'
 import Button from '../components/button/Button'
