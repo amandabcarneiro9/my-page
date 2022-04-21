@@ -35,7 +35,7 @@ export default function Header() {
             Work
           </Link>
           <Link to="/contact-form" className="__link" onClick={linkClick}>
-            Contact me
+            Contact
           </Link>
         </div>
       </div>
