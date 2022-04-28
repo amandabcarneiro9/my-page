@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import '../scss/contactForm.scss'
 import contactImage from '../images/junior.jpg'
 import Errors from '../components/errors/Errors'
+import { GoogleReCaptcha, GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 
 export default function ContactForm() {
+  const [token, setToken] = useState(null)
   const [contactState, setContactState] = useState({
     name: '',
     email: '',
@@ -20,18 +22,38 @@ export default function ContactForm() {
     })
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
+    alert(1)
     event.preventDefault()
 
-    setErrors(
-      [
-        name.trim() === '' && 'Fill the name',
-        subject.trim() === '' && 'Fill the subject',
-        message.trim() === '' && 'Fill the message',
-      ].filter(Boolean),
-    )
+    const errors = [
+      token === null && 'Captcha is required',
+      name.trim() === '' && 'Fill the name',
+      subject.trim() === '' && 'Fill the subject',
+      message.trim() === '' && 'Fill the message',
+    ].filter(Boolean)
 
-    return console.log(contactState)
+    setErrors(errors)
+
+    if (errors.length > 0) return
+
+    const response = await fetch('https://kilfkkqwqwvneflp463pqqxml40zygwz.lambda-url.us-east-1.on.aws/', {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'no-cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json',
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify({ ...contactState, token }),
+    })
+
+    const result = await response.text()
+
+    console.log(result)
   }
 
   console.log(errors)
@@ -82,6 +104,9 @@ export default function ContactForm() {
             onChange={updateState}
             required
           ></textarea>
+          <GoogleReCaptchaProvider reCaptchaKey="6LeO3awfAAAAAAALbvuwAJIMu3jFtMm_K4PB8cfP" useEnterprise>
+            <GoogleReCaptcha onVerify={setToken} />
+          </GoogleReCaptchaProvider>
           <input type="submit" value="send message" className="__send-button" />
           <Errors errors={errors} />
         </form>
