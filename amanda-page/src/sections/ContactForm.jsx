@@ -52,11 +52,7 @@ export default function ContactForm() {
     })
 
     const result = await response.text()
-
-    console.log(result)
   }
-
-  console.log(errors)
 
   return (
     <div className="contact-form">
@@ -104,7 +100,7 @@ export default function ContactForm() {
             onChange={updateState}
             required
           ></textarea>
-          <GoogleReCaptchaProvider reCaptchaKey="6LeO3awfAAAAAAALbvuwAJIMu3jFtMm_K4PB8cfP" useEnterprise>
+          <GoogleReCaptchaProvider reCaptchaKey={process.env.REACT_APP_GOOGLE_CAPTCHA_TOKEN} useEnterprise>
             <GoogleReCaptcha onVerify={setToken} />
           </GoogleReCaptchaProvider>
           <input type="submit" value="send message" className="__send-button" />
