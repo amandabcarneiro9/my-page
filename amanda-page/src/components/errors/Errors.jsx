@@ -6,6 +6,7 @@ export default function Errors({ errors }) {
 
   return (
     <div className="errors">
+      Sorry, but some errors happened:
       <ul>
         {errors.map((error, index) => (
           <li className="__error" key={index}>
