@@ -131,7 +131,7 @@ export default function ContactForm() {
                 onChange={updateState}
                 required
               ></textarea>
-              <GoogleReCaptchaProvider reCaptchaKey={process.env.REACT_APP_GOOGLE_CAPTCHA_TOKEN}>
+              <GoogleReCaptchaProvider reCaptchaKey={process.env.REACT_APP_GOOGLE_CAPTCHA_TOKEN} useEnterprise>
                 <GoogleReCaptcha onVerify={setToken} />
               </GoogleReCaptchaProvider>
               <input type="submit" value="send message" className="__send-button" />
