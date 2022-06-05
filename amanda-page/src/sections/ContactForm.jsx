@@ -4,16 +4,20 @@ import contactImage from '../images/junior.jpg'
 import Errors from '../components/errors/Errors'
 import { GoogleReCaptcha, GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 
+const emptyState = {
+  name: '',
+  email: '',
+  subject: '',
+  message: '',
+}
+
 export default function ContactForm() {
   const [token, setToken] = useState(null)
-  const [contactState, setContactState] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  })
+  const [contactState, setContactState] = useState(emptyState)
   const [errors, setErrors] = useState([])
   const { name, email, subject, message } = contactState
+  const [messageSent, setMessageSent] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   function updateState({ currentTarget }) {
     setContactState({
@@ -23,8 +27,8 @@ export default function ContactForm() {
   }
 
   async function handleSubmit(event) {
-    alert(1)
     event.preventDefault()
+    setMessageSent(false)
 
     const errors = [
       token === null && 'Captcha is required',
@@ -36,22 +40,30 @@ export default function ContactForm() {
     setErrors(errors)
 
     if (errors.length > 0) return
+    setLoading(true)
 
     const response = await fetch('https://kilfkkqwqwvneflp463pqqxml40zygwz.lambda-url.us-east-1.on.aws/', {
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      mode: 'no-cors', // no-cors, *cors, same-origin
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'same-origin', // include, *same-origin, omit
+      method: 'POST',
+      cache: 'no-cache',
+      credentials: 'omit',
       headers: {
+        Accept: 'application/json',
         'Content-Type': 'application/json',
-        // 'Content-Type': 'application/x-www-form-urlencoded',
       },
-      redirect: 'follow', // manual, *follow, error
-      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      referrerPolicy: 'no-referrer',
       body: JSON.stringify({ ...contactState, token }),
     })
+    setLoading(false)
 
-    const result = await response.text()
+    const result = await response.json()
+
+    if (!result.success) {
+      return setErrors(result.errors)
+    }
+
+    setMessageSent(true)
+
+    setContactState(emptyState)
   }
 
   return (
@@ -65,46 +77,68 @@ export default function ContactForm() {
           <p>Do you want to talk about some ideas for projects ?</p>
           <span>Don't hesitate to contact me! Let's make plans together! </span>
         </div>
+
         <form action="" className="__form" onSubmit={handleSubmit}>
-          <label htmlFor="name">Name:</label>
-          <input type="text" name="name" placeholder="Your name Here" value={name} onChange={updateState} required />
+          {loading && (
+            <div className="__loading-message">
+              <div className="loadingIcon">
+                <div />
+                <div />
+                <div />
+              </div>
+            </div>
+          )}
+          {!loading && (
+            <>
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name Here"
+                value={name}
+                onChange={updateState}
+                required
+              />
 
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Your email Here"
-            value={email}
-            onChange={updateState}
-            required
-          />
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email Here"
+                value={email}
+                onChange={updateState}
+                required
+              />
 
-          <label htmlFor="subject">Subject:</label>
-          <input
-            type="text"
-            name="subject"
-            placeholder="What is the subject"
-            value={subject}
-            onChange={updateState}
-            required
-          />
+              <label htmlFor="subject">Subject:</label>
+              <input
+                type="text"
+                name="subject"
+                placeholder="What is the subject"
+                value={subject}
+                onChange={updateState}
+                required
+              />
 
-          <label htmlFor="message">Message: </label>
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            placeholder="Your message here..."
-            value={message}
-            onChange={updateState}
-            required
-          ></textarea>
-          <GoogleReCaptchaProvider reCaptchaKey={process.env.REACT_APP_GOOGLE_CAPTCHA_TOKEN} useEnterprise>
-            <GoogleReCaptcha onVerify={setToken} />
-          </GoogleReCaptchaProvider>
-          <input type="submit" value="send message" className="__send-button" />
-          <Errors errors={errors} />
+              <label htmlFor="message">Message: </label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Your message here..."
+                value={message}
+                onChange={updateState}
+                required
+              ></textarea>
+              <GoogleReCaptchaProvider reCaptchaKey={process.env.REACT_APP_GOOGLE_CAPTCHA_TOKEN} useEnterprise>
+                <GoogleReCaptcha onVerify={setToken} />
+              </GoogleReCaptchaProvider>
+              <input type="submit" value="send message" className="__send-button" />
+              <Errors errors={errors} />
+              {messageSent && <span className="__success-message">Thanks for your message! I'll contact you soon</span>}
+            </>
+          )}
         </form>
       </div>
     </div>
