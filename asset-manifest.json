@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/my-page/static/css/main.d90de94b.css",
+    "main.js": "/my-page/static/js/main.36e814ce.js",
+    "static/js/488.d96ae63c.chunk.js": "/my-page/static/js/488.d96ae63c.chunk.js",
+    "static/media/camilla-chagas.gif": "/my-page/static/media/camilla-chagas.9e86ef23260ee06922d2.gif",
+    "static/media/das-travel.gif": "/my-page/static/media/das-travel.a4e027b6c0eb5cd13cab.gif",
+    "static/media/pluris-certo.gif": "/my-page/static/media/pluris-certo.f10cabf8f2ad553d44ad.gif",
+    "static/media/junior.jpg": "/my-page/static/media/junior.8bb0018483b06d37d443.jpg",
+    "static/media/skills.png": "/my-page/static/media/skills.97ff9aa0b14d94ed1d22.png",
+    "static/media/about.jpg": "/my-page/static/media/about.d19b9788e4dbdfc3d416.jpg",
+    "static/media/women_generated.jpg": "/my-page/static/media/women_generated.8bd1fc261101028db49d.jpg",
+    "static/media/next-js.png": "/my-page/static/media/next-js.9f2998ce561e270d2d92.png",
+    "static/media/logo_size.jpg": "/my-page/static/media/logo_size.b7879ce2ad5b9a47cb2d.jpg",
+    "index.html": "/my-page/index.html",
+    "main.d90de94b.css.map": "/my-page/static/css/main.d90de94b.css.map",
+    "main.36e814ce.js.map": "/my-page/static/js/main.36e814ce.js.map",
+    "488.d96ae63c.chunk.js.map": "/my-page/static/js/488.d96ae63c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d90de94b.css",
+    "static/js/main.36e814ce.js"
+  ]
+}
