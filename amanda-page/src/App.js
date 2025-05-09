@@ -4,7 +4,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import '../src/scss/app.scss'
 import Footer from './components/footer/Footer'
 
@@ -19,12 +19,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <Switch>
-          <Route path="/portfolio/pluris-project" component={PlurisProject} />
-          <Route path="/portfolio/das-travel-project" component={DasTravel} />
-          <Route path="/portfolio/camilla-chagas-project" component={CamillaProject} />
-          <Route path="/" component={MainPage} />
-        </Switch>
+        <Routes>
+          <Route path="/portfolio/pluris-project" element={<PlurisProject />} />
+          <Route path="/portfolio/das-travel-project" element={<DasTravel />} />
+          <Route path="/portfolio/camilla-chagas-project" element={<CamillaProject />} />
+          <Route path="/" element={<MainPage />} />
+        </Routes>
         <Footer />
       </BrowserRouter>
     </div>
