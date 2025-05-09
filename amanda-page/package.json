@@ -2,6 +2,7 @@
   "name": "amanda-page",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://amandacarneiro.github.io/my-page",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -27,7 +28,9 @@
     "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --cache . --ext .ts,.js,.jsx --max-warnings 0 --fix"
+    "lint": "eslint --cache . --ext .ts,.js,.jsx --max-warnings 0 --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -50,6 +53,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.29.4",
+    "gh-pages": "^6.1.1",
     "prettier": "^2.6.2"
   }
 }
